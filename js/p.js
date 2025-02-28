@@ -1,0 +1,20 @@
+$(document).ready(function(){
+    $(".menu").each(function(){
+        $(this).click(function(){
+            var id = $(this).attr("plink");
+            console.log(id);
+            $.ajax({
+                url:"pages/"+id+".php",
+                beforeSend:function()
+                {
+                    //$(this).addClass("disabled");
+                },
+                cache:false,
+                success:function(response)
+                { 
+                    $(".right").html(response);
+                }
+            })
+        })
+    })
+})

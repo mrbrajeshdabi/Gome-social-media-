@@ -1,0 +1,12 @@
+$(document).ready(function(){
+    $("#settingbtn").click(function(){
+        $.ajax({
+            type:"POST",
+            url:"setting.php",
+            success:function(response)
+            {
+                $(".dataload").html(response);
+            }
+        })
+    })
+})
