@@ -1,7 +1,7 @@
 # Author => Mr Brajesh Dabi
 # Project Name => Gome-social-media-
 # ------------------------------
-#  INSTALLING APP STEP BY STEP
+#  INSTALLING SOCIAL MEDIA Gome APP STEP BY STEP
 # -------------------------------------------------------------------------
 # STEP 1 => git clone https://github.com/mrbrajeshdabi/Gome-social-media-.git
 # STEP 2 => cd Gome-social-media-
