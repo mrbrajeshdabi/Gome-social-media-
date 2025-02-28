@@ -26,28 +26,15 @@
          <ul class="list-group">
             
                 
-                   </ul><table id="table">
-         <tbody><tr>
-                  <td><li class="list-group-item">Name</li></td>
-                  <td><li class="list-group-item">Narendra</li></td>
-                  </tr>
-              
-                  <tr>
-                    <td><li class="list-group-item">Username</li></td>
-                    <td><li class="list-group-item">nk_dabi_62</li></td>
-                  </tr>
-                  <tr>
-                  <td><li class="list-group-item">Email</li></td>
-                  <td><li class="list-group-item">nkdabi@gmail.com</li></td>
-                  </tr>
-              
-                  <tr>
-                    <td><li class="list-group-item">Mobile Number</li></td>
-                    <td><li class="list-group-item">6266127842</li></td>
-                  </tr>
-                
+                   </ul>
+                   <table id="table">
+                  <tbody>
+                  <tr><td>Name</td><td>testing</td></tr>
+                  <tr><td>username</td><td>test_01</td></tr>
+                  <tr><td>email</td><td>test01#gmail.com</td></tr>
+                  <tr><td>Mobile Number</td><td>0000000000</td></tr>
                          
-         </tbody></table>
+                 </tbody></table>
        </div>
        <div class="card-footer d-flex justify-content-end">
          <button class="btn btn-dark w-50 closebtn" type="button">Close</button>
