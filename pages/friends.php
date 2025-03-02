@@ -6,9 +6,9 @@
             <div class="card-header" id="card">
                 <form class="search_frd">
                     <div class="form-group d-flex">
-                        <input type="search" class="form-control" id="search" name="search" placeholder="Search Friends">
+                        <input type="search" class="form-control" id="search" name="search" placeholder="Search Friends" disabled>
                        <!--- <i class="fa fa-search search w-50"></i>--->
-                        <button class="btn btn-light w-50 ms-3">Search</button>
+                        <button class="btn btn-light w-50 ms-3" type="button" disabled>Search</button>
                     </div>
                 </form>
             </div>

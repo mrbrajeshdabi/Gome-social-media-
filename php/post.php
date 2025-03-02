@@ -29,7 +29,7 @@ if($chktable)
                     $store = $db->query("INSERT INTO post(post_unique_id,post_pic,post_status,post_song,post_date)VALUES('{$unique_id}','{$picname}','{$poststatus}','{$post_song}','{$postdate}')");
                     if($store)
                     {
-                        $msg = array("status"=>"200","msg"=>"post_success","path"=>"#home");
+                        $msg = array("status"=>200,"msg"=>"post_success","path"=>"#home");
                         echo json_encode($msg);
                     }
                     else

@@ -254,6 +254,7 @@ $(document).ready(function(){
             success:function(response)
             {
                 var obj = JSON.parse(response);
+                console.log(response);
                 if(obj.status == 200)
                 {
                     console.log("Post Uploaded Success");
