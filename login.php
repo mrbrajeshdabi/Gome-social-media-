@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+require("element/nav.php");
+?>
    <form class="login_frm">
      <center><h1>Login Now </h1></center>
      <center class="mt-5 mb-2 d-none text"><span class="alert alert-warning text-center p-2  mb-0 msg"></span></center>

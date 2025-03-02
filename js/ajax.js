@@ -258,10 +258,9 @@ $(document).ready(function(){
                 if(obj.status == 200)
                 {
                     console.log("Post Uploaded Success");
-                    history.go(); 
-                    /*setTimeout(() => {
+                    setTimeout(() => {
                         $(obj.path).click();                   
-                    }, 1000);*/
+                    }, 1000);
                 }
                 else if(obj.msg.trim() == "File Allready Exit")
                 {
@@ -335,7 +334,6 @@ $(document).ready(function(){
             $("#playaudio").attr("src",url);
             $("#playaudio").get(0).play();
         })
-    })
-    
+    }) 
 });
 

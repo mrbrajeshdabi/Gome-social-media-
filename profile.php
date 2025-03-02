@@ -24,7 +24,7 @@ if(isset($_COOKIE['_aut_ui_']) != 1)
  <div class="row p-0 m-0">
    <div class="col-md-2 left p-0 m-0 text-dark">
    <div class="mobilenav">
-   <nav class="narvbar navbar-expand-md navbar-dark bg-dark text-light">
+   <nav class="narvbar navbar-expand-md navbar-dark bg-dark text-light fixed-top">
         <ul class="nav navbar">
           <li class="nav-item ms-2"><i class="fa fa-home text-light fs-5 menu" plink="home" id="home"></i></li>
           <li class="nav-item ms-2"><i class="fa fa-bell text-light fs-5 menu" plink="notification" id="bell"></i></li>
@@ -35,6 +35,7 @@ if(isset($_COOKIE['_aut_ui_']) != 1)
         </ul>
       </nav>
    </div>
+   <nav class="narvbar navbar-expand-md navbar-dark bg-dark text-light sticky-top">
      <div class="desktopnav">
      <div class="card">
        <div class="card-header text-light bg-dark">
@@ -47,13 +48,14 @@ if(isset($_COOKIE['_aut_ui_']) != 1)
            <li class="list-group-item menu" plink="friends"><i class="fa fa-users "></i></li>
            <!--<li class="list-group-item " pid="reels"><i class="fa fa-cubes"></i></li>-->
            <li class="list-group-item menu" plink="uploadpic"><i class="fa fa-plus-square-o "></i></li>
-           <li class="list-group-item menu"  plink="myprofile"><i class="fa fa-user-circle "></i></li>
+           <li class="list-group-item menu"  plink="myprofile" id="mprofile"><i class="fa fa-user-circle "></i></li>
            <li class="list-group-item menu"><a href="logout.php" target="_self"><i class="fa fa-sign-out"></i></a></li>
          </ul>
        </div>
        <div class="card-footer"></div>
      </div>
      </div>
+</nav>
    </div>
    <div class="col-md-10 right p-0 m-0 text-light">
     

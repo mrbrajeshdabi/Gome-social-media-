@@ -1,4 +1,9 @@
- 
+ <!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">GOME</span>
+  </div>
+</nav>
  <div class="row p-0 m-0">
    <div class="col-md-3 p-0 m-0"></div>
    <div class="col-md-6 p-0 m-0 ppp">

@@ -1,9 +1,14 @@
-
+<!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">GOME</span>
+  </div>
+</nav>
 <div class="row p-0 m-0">
     <div class="col-md-3 p-0 m-0"></div>
     <div class="col-md-6 p-0 m-0">
         <div class="card mt-5">
-            <div class="card-header" id="card">
+            <div class="card-header bg-dark" id="card">
                 <form class="search_frd">
                     <div class="form-group d-flex">
                         <input type="search" class="form-control" id="search" name="search" placeholder="Search Friends" disabled>
@@ -13,8 +18,8 @@
                 </form>
             </div>
             <div class="card-body">
-                <div class="table-responsive bg-info">
-                <table class="table">
+                <div class="table-responsive bg-dark">
+                <table class="table table-danger">
                     <thead class="text-center">
                     <tr>
                         <td>Profilepic</td>

@@ -1,6 +1,12 @@
 <?php
 require("../php/db.php");
 ?>
+<!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">GOME</span>
+  </div>
+</nav>
 <div class="row p-0 m-0">
     <center><h1>Notification</h1></center>
     <div class="col-md-3 p-0 m-0"></div>

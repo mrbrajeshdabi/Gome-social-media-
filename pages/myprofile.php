@@ -1,3 +1,9 @@
+<!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">GOME</span>
+  </div>
+</nav>
 <?php
 require("../php/db.php");
 $unique_id = $_COOKIE['_aut_ui_'];
@@ -51,12 +57,13 @@ $sql = $db->query("SELECT * FROM users WHERE unique_id = '{$unique_id}'");
                       </div>
                     </div>
                     <div class="posttools mt-2">
-                    <i class="fa fa-thumbs-up mylikeicon text-light" id="likebtn_">'.$postdata['post_like'].'</i>
-                     <i class="fa fa-thumbs-down myunlikeicon text-light" id="dislikebtn_">'.$postdata['post_unlike'].'</i>
-                    </div><hr>
-                    <div class="d-flex">
-                    <button class="btn btn-warning updatebtn " pid='.$postdata['post_id'].'><i class="fa fa-pencil-square-o"></i></button>
-                     <button class="btn btn-danger deletebtn" pid='.$postdata['post_id'].'><i class="fa fa-trash"></i></button>
+                    <i class="fa fa-thumbs-up mylikeicon text-light ms-3">'.$postdata['post_like'].'</i>
+                     <i class="fa fa-thumbs-down myunlikeicon text-light ms-4">'.$postdata['post_unlike'].'</i>
+                     <i class="fa fa-pencil-square-o iconbtn ms-4" pid='.$postdata['post_id'].' type="update"></i>
+                    <i class="fa fa-trash iconbtn ms-4" pid='.$postdata['post_id'].' type="delete" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                    </div>
+                    <div class="mb-5">
+                   
                     </div>
                     </div>
                 
@@ -76,5 +83,37 @@ $sql = $db->query("SELECT * FROM users WHERE unique_id = '{$unique_id}'");
 
  </div>  
 <script src="js/setting.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="mclose">Close</button>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <center><span class="delmsg text-center w-100"></span></center>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
+<script>
+  /*.updatebtn{
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.deletebtn{
+  margin-left: 110px;
+  margin-bottom: 5px;
+}
+
+#likebtn_{
+  font-size: 30px;
+  margin-left: 5px;
+}
+#dislikebtn_{
+  font-size:30px;
+  margin-left:100px;
+}
+
+*/
+</script>

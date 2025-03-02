@@ -1,4 +1,9 @@
-
+<!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">GOME</span>
+  </div>
+</nav>
 <link rel="stylesheet" href="css/uploadpic.css">
 <!-- <div class="tools d-flex p-5">
       <button id="posts" class="me-5 btn-danger">Post</button>

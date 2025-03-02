@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
-
-   <div class="row p-0 m-0">
+<?php
+require("element/nav.php");
+?>
+    <div class="row p-0 m-0">
     <div class="col-md-3 p-0 m-0"></div>
     <div class="col-md-6 p-0 m-0">
+    <div class="leftbox"></div>
+    <div class="centerbox"></div>
+    <div class="rightbox"></div>
     <form class="signup_frm" autocomplete="off">
      <center><h1>Register Now </h1></center>
      <center class="mt-5 mb-2 d-none text"><span class="alert alert-warning text-center p-2  mb-0 msg"></span></center>
@@ -33,13 +37,16 @@
      </div>
      <div class="form-group">
        <label for="phone">Mobile Number</label>
-       <input type="number" name="phone" id="phone" autocomplete="off">
+       <input type="phone" name="phone" id="phone" autocomplete="off">
      </div>
      <div class="form-group">
        <label for="password">Password</label>
        <input type="new-password" name="password" id="password" autocomplete="off">
      </div>
+     
+     
      <center><button id="sbtn" type="submit" name="submit">Register</button></center>
+     
    </form>
     </div>
     <div class="col-md-3 p-0 m-0"></div>
