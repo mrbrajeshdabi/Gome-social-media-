@@ -37,7 +37,7 @@ require("../php/db.php");
                                       <tr class="out">
                                       <td><h4>'.$d['username'].'</h4></td>
                                       <td class="accept"><button class="btn btn-success rubtn ms-5" pid="'.$data['id'].'" uuid='.$data['sendrequestid'].' msg="accept">Accept</button></td>
-                                      <td class="cancel"><button class="btn btn-danger rubtn ms-5" pid="'.$data['id'].'" uuid='.$data['sendrequestid'].' msg="cancel">cancel</button></td>
+                                      <td class="cancel"><button class="btn btn-danger rubtn ms-2" pid="'.$data['id'].'" uuid='.$data['sendrequestid'].' msg="cancel">cancel</button></td>
                                       </tr>
                               
                               ';

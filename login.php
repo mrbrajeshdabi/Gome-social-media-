@@ -14,7 +14,8 @@
 <?php
 require("element/nav.php");
 ?>
-   <form class="login_frm">
+<div class="loginleftbox"></div>
+   <form class="login_frm text-light">
      <center><h1>Login Now </h1></center>
      <center class="mt-5 mb-2 d-none text"><span class="alert alert-warning text-center p-2  mb-0 msg"></span></center>
      <div class="form-group">
