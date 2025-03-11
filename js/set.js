@@ -87,12 +87,13 @@ $(document).ready(function(){
       url:"php/getuserdata.php",
       success:function(response)
       {
-        $("#email").mouseover(function(){alert("Email Not Update")});
-         var userdata = JSON.parse(response);
+        //$("#email").mouseover(function(){alert("Email Not Update")});
+         let userdata = JSON.parse(response);
          $("#fname").val(userdata.msg.fullname);
          $("#email").val(userdata.msg.email);
          $("#uname").val(userdata.msg.username);
          $("#phone").val(userdata.msg.phone);
+         $("#unique_id").val(userdata.msg.unique_id);
       }
     })
   })
@@ -100,18 +101,57 @@ $(document).ready(function(){
     e.preventDefault();
     $.ajax({
       type:"POST",
-      url:"php/updateinfo.php",
+      url:"php/updateprofile.php",
       data:new FormData(this),
       processData:false,
       contentType:false,
       cache:false,
       beforeSend:function()
       {
-
+        $(".updateprofilebtn").html("Please Wait..");
+        $(".updateprofilebtn").addClass("disabled","disabled");
       },
       success:function(response)
       {
+        let obj = JSON.parse(response);
+        if(obj.status== true)
+        {
+          $(".updateprofilebtn").removeClass("disabled","disabled");
+          $(".updateprofilebtn").removeClass("btn btn-warning");
+          $(".updateprofilebtn").addClass("btn btn-success");
+          $(".updateprofilebtn").html("Update Success");
+          setTimeout(function(){
+            $(".updateprofilebtn").removeClass("btn btn-success");
+            $(".updateprofilebtn").addClass("btn btn-warning");
+            $(".updateprofilebtn").html("");
+            $(".updateprofilebtn").html("Update Your Profile");
+          },2000)
+        }
+        else
+        {
+          console.log(obj);
+        }
+      }
+    })
+  })
+  //delete account
+  $(".deleteaccountfrm").submit(function(e){
+    e.preventDefault();
+    $.ajax({
+      type:"POST",
+      url:"php/delaccount.php",
+      beforeSend:function()
+      {
+          $(".profiledelbtn").html("Please Wait..");
+      },
+      success:function(response)
+      {
+        $(".profiledelbtn").html("Delete Account");
         console.log(response);
+        setTimeout(() => {
+          history.go();  
+        }, 3000);
+        
       }
     })
   })
