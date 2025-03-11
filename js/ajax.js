@@ -15,7 +15,7 @@ $(document).ready(function(){
         success:function(response)
         {
             $("#sbtn").html("");
-           var obj = JSON.parse(response);
+           let obj = JSON.parse(response);
            if(obj.status == 200)
            {
                 $("#sbtn").html("");
@@ -55,7 +55,7 @@ $(document).ready(function(){
             },
             success:function(response)
             {
-                var obj = JSON.parse(response);
+                let obj = JSON.parse(response);
                 if(obj.status == "200" && obj.msg == "success")
                 {
                     window.location.href=obj.path;
@@ -75,11 +75,11 @@ $(document).ready(function(){
     })
     //--------------------------user icon codng ---------------------------
     $("#usericon").click(function(){
-        var file = document.createElement("INPUT");
+        let file = document.createElement("INPUT");
         file.setAttribute("type","file");
         file.click()
         $(file).on("change",function(){
-            var reader = new FileReader();
+            let reader = new FileReader();
             reader.readAsDataURL(this.files[0])
             $(reader).on("load",function(){
                 const url = reader.result;
@@ -99,7 +99,7 @@ $(document).ready(function(){
                         cache:false,
                         success:function(response)
                         {
-                           var obj = JSON.parse(response);
+                           let obj = JSON.parse(response);
                            if(obj.status == "200" && obj.msg == "success")
                            {
                              window.location.href=obj.path;
@@ -137,7 +137,7 @@ $(document).ready(function(){
                 cache:false,
                 success:function(response)
                 {
-                    var obj = JSON.parse(response);
+                    let obj = JSON.parse(response);
                     //console.log(response)
                     if(obj.msg == "send" || obj.type == "request_unsend")
                     {
@@ -187,7 +187,7 @@ $(document).ready(function(){
         $(this).click(function(){
             const id = $(this).attr('pid');
             const uid = $(this).attr('uuid');
-            var msg = $(this).attr('msg');
+            let msg = $(this).attr('msg');
             console.log(id)
             $.ajax({
                 type:"POST",
@@ -199,7 +199,7 @@ $(document).ready(function(){
                 },
                 success:function(response)
                 {
-                    var obj = JSON.parse(response);
+                    let obj = JSON.parse(response);
                     if(obj.status == "200")
                     {
                         $(".notmsg").addClass("alert alert-success");
@@ -219,7 +219,7 @@ $(document).ready(function(){
     })
     //------------------------post upload  ----------------------
      $("#uploadpic").on("change",function(){
-        var reader = new FileReader();
+        let reader = new FileReader();
         reader.readAsDataURL(this.files[0]);
         reader.onload=function()
         {
@@ -253,7 +253,7 @@ $(document).ready(function(){
             },
             success:function(response)
             {
-                var obj = JSON.parse(response);
+                let obj = JSON.parse(response);
                 console.log(response);
                 if(obj.status == 200)
                 {
@@ -276,8 +276,8 @@ $(document).ready(function(){
    //------------------like dislike -------------------
    $(".likeorunlikebtn").each(function(){
     $(this).click(function(){
-        var type = $(this).attr("type");
-        var id = $(this).attr("pid");
+        let type = $(this).attr("type");
+        let id = $(this).attr("pid");
         $.ajax({
             type:"POST",
             url:"php/postlikedislike.php",
@@ -287,7 +287,7 @@ $(document).ready(function(){
             },
             success:function(response)
             {
-                var obj = JSON.parse(response);
+                let obj = JSON.parse(response);
                 if(obj.operation.trim() == "like")
                 {
                     $("#dislikebtn_"+id).removeClass("text-danger");
@@ -315,12 +315,12 @@ $(document).ready(function(){
     $(".userpostpic").each(function(){
         $(this).mouseover(function(){
            //$("audio").attr("src","");
-            var url = $(this).attr("url");
+            let url = $(this).attr("url");
             $("audio").attr("src",url);
             $("audio").get(0).play();
         })
         /*$(this).mouseout(function(){
-            var url = $(this).attr("url");
+            let url = $(this).attr("url");
             $("audio").attr("src",url);
             $("audio").get(0).pause();
         })*/
@@ -328,12 +328,30 @@ $(document).ready(function(){
 
     $(".songplaybtn").each(function(){
         $(this).click(function(){
-            $("#playaudio").attr("src","");
-            var url = $(this).attr("url");
-            console.log(url)
-            $("#playaudio").attr("src",url);
-            $("#playaudio").get(0).play();
+            if($(this).hasClass("fa fa-play"))
+            {
+                $(this).removeClass("fa fa-play");
+                $(this).addClass("fa fa-pause");
+                $("#playaudio").attr("src","");
+                let url = $(this).attr("url");
+                $("#playaudio").attr("src",url);
+                $("#playaudio").get(0).play();
+            }
+            else if($(this).hasClass("fa fa-pause"))
+            {
+                $(this).removeClass("fa fa-pause");
+                $(this).addClass("fa fa-play");
+                $("#playaudio").attr("src","");
+                let url = $(this).attr("url");
+                $("#playaudio").attr("src",url);
+                $("#playaudio").get(0).pause();
+            }
+            else
+            {
+                console.log("error");
+            }
+            
         })
-    }) 
+    })
 });
 
