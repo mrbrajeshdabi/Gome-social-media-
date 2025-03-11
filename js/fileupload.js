@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("#uploadpic").on("change",function(){
-    var reader = new FileReader();
+    let reader = new FileReader();
     reader.readAsDataURL(this.files[0]);
     reader.onload=function()
     {
@@ -9,7 +9,7 @@ $(document).ready(function(){
       $("#upload_img").attr("src",url);
       $("#uploadbtn").removeClass("disabled");
       /*$("#uploadsong").on("change",function(){
-        var reader2 = new FileReader();
+        let reader2 = new FileReader();
         reader2.readAsDataURL(this.files[0]);
         reader2.onload=function()
         {
@@ -60,14 +60,14 @@ $(document).ready(function(){
 //const obj39 = {status:true,songname:"Surili Ankhiyo Wali",songurl:"https://dl.prokerala.com/downloads/ringtones/files/mp3/surili-akhiyon-wale-instrumental-bgm-romantic-veer-59244.mp3"};
 //const obj40 = {status:true,songname:"Kuch Soch Ke Bola Hoga",songurl:"https://dl.prokerala.com/downloads/ringtones/files/mp3/tera-ghata-ringtone-download-free-1-46156.mp3"};
 
-var array = new Array(obj,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,obj13,obj14,obj15,obj16,obj17,obj18,obj19,obj20,obj21,obj22,obj23,obj24,obj25,obj26,obj27,obj28,obj29,obj30,obj31,obj32,obj33,obj34,obj35,obj36,obj37,obj38,obj39,obj40);
+let array = new Array(obj,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,obj13,obj14,obj15,obj16,obj17,obj18,obj19,obj20,obj21,obj22,obj23,obj24,obj25,obj26,obj27,obj28,obj29,obj30,obj31,obj32,obj33,obj34,obj35,obj36,obj37,obj38,obj39,obj40);
 
 
 for(i=0; i<array.length; i++)
 {
   //console.log(array[i].songurl)
-  var listbox= document.querySelector(".musiclistbox");
-  var tools = document.createElement("DIV");
+  let listbox= document.querySelector(".musiclistbox");
+  let tools = document.createElement("DIV");
   tools.setAttribute("class","toolbox d-flex justify-content-center mb-5")
   const playbtn = document.createElement("I");
   playbtn.setAttribute("class","btn btn-dark fa fa-volume-up");
@@ -77,9 +77,9 @@ for(i=0; i<array.length; i++)
   pausebtn.setAttribute("class","btn btn-dark fa fa-plus-square ms-5");
   pausebtn.setAttribute("url",array[i].songurl);
  // pausebtn.className = "pauseBtn";
-  var names = document.createElement("DIV");
+  let names = document.createElement("DIV");
   names.setAttribute("class","name");
-  var songname = document.createElement("P");
+  let songname = document.createElement("P");
   songname.innerHTML=array[i].songname;
   songname.setAttribute("class","alert alert-success");
   // append child
@@ -91,14 +91,14 @@ for(i=0; i<array.length; i++)
     listbox.appendChild(tools);
     playbtn.onclick=function(){
      // this.innerHTML="Playing..";
-      var url = this.getAttribute("url");
-      var dos = document.querySelector("#listaudio")
+      let url = this.getAttribute("url");
+      let dos = document.querySelector("#listaudio")
       dos.setAttribute("src",url);
       dos.play();
     }
     pausebtn.onclick=function(){
-      var url = this.getAttribute("url");
-      var dos = document.querySelector("#listaudio")
+      let url = this.getAttribute("url");
+      let dos = document.querySelector("#listaudio")
       dos.setAttribute("src",url);
     }
   }
