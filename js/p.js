@@ -1,8 +1,7 @@
 $(document).ready(function(){
     $(".menu").each(function(){
         $(this).click(function(){
-            var id = $(this).attr("plink");
-            console.log(id);
+            let id = $(this).attr("plink");
             $.ajax({
                 url:"pages/"+id+".php",
                 beforeSend:function()
