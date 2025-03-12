@@ -50,7 +50,7 @@
                 echo '
                 
                 <ul class="list-group">
-                <li class="list-group-item"><i class="fa fa-music"></i><span class="ms-5">'.$data['songname'].'</span><i class="fa fa-play ms-3 text-info songplaybtn" url='.$data['songurl'].'></i><i class="fa fa-plus-circle ms-2 text-info songaddbtn" url='.$data['songurl'].'></i></li>
+                <li class="list-group-item"><i class="fa fa-play ms-3 text-dark songplaybtn" url='.$data['songurl'].'></i><i class="fa fa-plus-circle ms-2 text-dark songaddbtn" url='.$data['songurl'].'></i><span class="ms-5">'.$data['songname'].'</span></li>
                 </ul>
                 
                 ';
