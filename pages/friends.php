@@ -41,7 +41,11 @@
                                 {
                                     if($data['profilepic'] == "NULL")
                                     {
-                                        //echo"<td><img src='pages/th.jpg' class='img'></td>";
+                                        echo "<tr>
+                                            <td><center><i class='fa fa-user-circle'></i></center></td>
+                                            <td><center>".$data['username']."</center></td>
+                                            <td><center><i class='fa fa-user-plus requestbtn text-dark' aria-hidden='true' rid=".$data['unique_id']." sid=".$_COOKIE['_aut_ui_']." id=btnid_".$data['id']." type='request_send'></i></center></td>
+                                            </tr>"; 
                                     }
                                     else{
                                         
