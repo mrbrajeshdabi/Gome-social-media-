@@ -9,7 +9,7 @@
        <div class="card-body">
          <ul class="list-group">
            <li class="list-group-item" id="accountbtn"><button class="w-100 accountcenterbtn">Account Center <i class="fa fa-user-circle"></i></button></li>
-           <li class="list-group-item"><button class="w-100 accountcenterbtn">Delete Account <i class="fa fa-arrow-right"></i></button></li>
+           <li class="list-group-item"><button class="w-100 accountcenterbtn" data-bs-toggle="modal" data-bs-target="#deleteaccount">Delete Account <i class="fa fa-arrow-right"></i></button></li>
          </ul>
        </div>
      </div>
@@ -94,7 +94,7 @@
          <label for="phone">Your Mobile Number</label>
          <input type="text" class="form-control" id="phone" name="phone">
        </div>
-       <center><button class="btn btn-warning text-dark mt-2 mb-2" type="submit">Update Your Profile</button></center>
+       <center><button class="btn btn-warning text-dark mt-2 mb-2 updateprofilebtn" type="submit">Update Your Profile</button></center>
      </form>
        </div>
        <div class="card-footer d-flex justify-content-end">
@@ -116,16 +116,16 @@
       <div class="modal-body">
         <div class="card">
           <div class="card-body">
-            <form class="delaccountfrm">
+            <form class="deleteaccountfrm">
               <label for="reasion">Any Reasion</label>
               <textarea name="reasion" id="reasion" cols="10" rows="3" class="form-control"></textarea>
+              <center><button class="btn btn-danger mt-3 mb-3 profiledelbtn" type="submit">Delete Account</button></center>
             </form>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

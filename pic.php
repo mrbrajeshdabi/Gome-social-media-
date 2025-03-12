@@ -30,7 +30,7 @@ if($data['profilepic'] != "NULL")
      <center>
        <div class="picbox">
        <i class="fa fa-users" id="usericon"></i>
-       <img src="background.webp" alt="hey" id="img">
+       <img src="pic.jpg" alt="hey" id="img">
      </div>
      </center>
      <center>

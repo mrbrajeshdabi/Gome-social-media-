@@ -43,13 +43,13 @@ if(isset($_COOKIE['_aut_ui_']) != 1)
        </div>
        <div class="card-body">
          <ul class="list-group text-center">
-           <li class="list-group-item menu" plink="home" id="home"><i class="fa fa-home "></i></li>
-           <li class="list-group-item menu" plink="notification" id="notifi"><i class="fa fa-bell "></i></li>
-           <li class="list-group-item menu" plink="friends"><i class="fa fa-users "></i></li>
+           <li class="list-group-item menu" plink="home" id="home"><i class="fa fa-home"></i></li>
+           <li class="list-group-item menu " plink="notification" id="notifi"><i class="fa fa-bell"></i></li>
+           <li class="list-group-item menu " plink="friends" id="user"><i class="fa fa-users"></i></li>
            <!--<li class="list-group-item " pid="reels"><i class="fa fa-cubes"></i></li>-->
-           <li class="list-group-item menu" plink="uploadpic"><i class="fa fa-plus-square-o "></i></li>
-           <li class="list-group-item menu"  plink="myprofile" id="mprofile"><i class="fa fa-user-circle "></i></li>
-           <li class="list-group-item menu"><a href="logout.php" target="_self"><i class="fa fa-sign-out"></i></a></li>
+           <li class="list-group-item menu" plink="uploadpic" id="plus"><i class="fa fa-plus-square-o"></i></li>
+           <li class="list-group-item menu "  plink="myprofile" id="myprofile"><i class="fa fa-user-circle"></i></li>
+           <li class="list-group-item menu "><a href="logout.php" target="_self"><i class="fa fa-sign-out" id="logout"></i></a></li>
          </ul>
        </div>
        <div class="card-footer"></div>
