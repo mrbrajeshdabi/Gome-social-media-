@@ -7,14 +7,13 @@
  <div class="row p-0 m-0">
    <div class="col-md-3 p-0 m-0"></div>
    <div class="col-md-6 p-0 m-0 ppp">
-   <center></center>
     <form class="uploadpic_frm">
     <div class="uploadpicbox">
       <img src="images/background.jpg" alt="" class="w-100">
     </div>
     <input type="file" accept="image/*" name="uploapic" class="uploapic">
     <textarea name="status" class="status" cols="40" rows="5"></textarea>
-    <button class="btn btn-primary picuploadbtn">Upload Now </button>
+    <button class="btn btn-primary picuploadbtn">Upload Now</button>
     </form>
     <div>
    <div class="col-md-3 p-0 m-0"></div>
